@@ -2,6 +2,7 @@
 
 For users without local GPU resources, Colab is an available solution. It could be transformed into a GPU instance with full SSH access.
 Here is a more detailed [tutorial](https://imadelhanafi.com/posts/google_colal_server/).
+
 The following is a simplified version of the tutorial.
 
 ## Setup sshd
