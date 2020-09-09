@@ -2,4 +2,4 @@
 
 This contains instructions for users without local GPU resources.
 
-+ [Colab](docs/Colab-instruction.md)
++ [Transform Google Colab to a GPU instance with full SSH access](docs/Colab-instruction.md)
