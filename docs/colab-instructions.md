@@ -35,3 +35,30 @@ The Port number can be found through the Ngrok interface https://dashboard.ngrok
 ```
 ssh root@0.tcp.ngrok.io -p [port_number]
 ```
+
+## Prevent connection dropping out due to inactivity
+
+Ssh connection drops out after several minutes of inactivity. 
+There are two options to fix this problem.
+
++ Server side configuration
+  Please log into the remote server and then open your configuration file.
+  ```
+  vi /etc/ssh/sshd_config
+  ```
+  Modify setting as follows:
+  ```
+  ClientAliveInterval 30
+  ClientAliveCountMax 5
+  ```
+
++ Client side configuration
+  Another option is to enable ServerAliveInterval option on the client’s side.
+  ```
+  $ vi ~/.ssh/ssh_config
+  ```
+  Modify setting as follows:
+  ```
+  ServerAliveInterval 15
+  ServerAliveCountMax 3
+  ```
