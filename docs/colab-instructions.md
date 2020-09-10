@@ -16,6 +16,8 @@ Let's setup and run `sshd`.
 ! mkdir -p /var/run/sshd
 ! echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 ! echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+! echo "ClientAliveInterval 30" >> /etc/ssh/sshd_config
+! echo "ClientAliveCountMax 5" >> /etc/ssh/sshd_config
 get_ipython().system_raw('/usr/sbin/sshd -D &')
 ```
 
@@ -32,34 +34,7 @@ get_ipython().system_raw('./ngrok authtoken $authtoken && ./ngrok tcp 22 &')
 
 ## Access your server
 Now, You can access your server through `ssh` command in your local machine.
-The Port number can be found through the Ngrok interface https://dashboard.ngrok.com/status.
+The TCP address and port number can be found through the Ngrok interface https://dashboard.ngrok.com/status.
 ```
-ssh root@0.tcp.ngrok.io -p [port_number]
+ssh root@[tcp_address] -p [port_number]
 ```
-
-## Prevent connection dropping out due to inactivity
-
-Ssh connection drops out after several minutes of inactivity. 
-There are two options to fix this problem.
-
-+ Server side configuration
-  Please log into the remote server and then open your configuration file.
-  ```
-  vi /etc/ssh/sshd_config
-  ```
-  Modify setting as follows:
-  ```
-  ClientAliveInterval 30
-  ClientAliveCountMax 5
-  ```
-
-+ Client side configuration
-  Another option is to enable ServerAliveInterval option on the client’s side.
-  ```
-  $ vi ~/.ssh/ssh_config
-  ```
-  Modify setting as follows:
-  ```
-  ServerAliveInterval 15
-  ServerAliveCountMax 3
-  ```
