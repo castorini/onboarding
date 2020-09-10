@@ -2,9 +2,7 @@
 
 For users without local GPU resources, Colab is an available solution. It could be transformed into a GPU instance with full SSH access.
 
-Here is a more detailed [tutorial](https://imadelhanafi.com/posts/google_colal_server/).
-
-The following is a simplified version of the tutorial.
+This document refers to this [tutorial](https://imadelhanafi.com/posts/google_colal_server/).
 
 ## Setup sshd
 First of all, create a Colab notebook using your Google account and use the GPU runtime mode.
@@ -38,3 +36,13 @@ The TCP address and port number can be found through the Ngrok interface https:/
 ```
 ssh root@[tcp_address] -p [port_number]
 ```
+
+## Time consumption on experiments
+
+These experiments are run under the Colab default setting.
+
++ [PyGaggle: Baselines on MS MARCO Document Retrieval](https://github.com/castorini/pygaggle/blob/master/docs/experiments-msmarco-document.md): It takes about 8 hours to re-rank each half subset.
+
++ [PyGaggle: Neural Ranking Baselines on MS MARCO Passage Retrieval](https://github.com/castorini/pygaggle/blob/master/docs/experiments-msmarco-passage.md):
+  + Re-Ranking with monoBERT: It takes about 50 mins to re-rank.
+  + Re-Ranking with monoT5: It takes about 70 mins to re-rank.
