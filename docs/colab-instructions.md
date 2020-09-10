@@ -41,8 +41,8 @@ ssh root@[tcp_address] -p [port_number]
 
 These experiments are run under the Colab default setting.
 
-+ [PyGaggle: Baselines on MS MARCO Document Retrieval](https://github.com/castorini/pygaggle/blob/master/docs/experiments-msmarco-document.md): It takes about 8 hours to re-rank each half subset.
++ [PyGaggle: Baselines on MS MARCO Document Retrieval](https://github.com/castorini/pygaggle/blob/master/docs/experiments-msmarco-document.md): It takes about 4 hours to re-rank each half subset.
 
 + [PyGaggle: Neural Ranking Baselines on MS MARCO Passage Retrieval](https://github.com/castorini/pygaggle/blob/master/docs/experiments-msmarco-passage.md):
   + Re-Ranking with monoBERT: It takes about 50 mins to re-rank.
-  + Re-Ranking with monoT5: It takes about 70 mins to re-rank.
+  + Re-Ranking with monoT5: It takes about 40 mins to re-rank.
