@@ -39,7 +39,7 @@ ssh root@[tcp_address] -p [port_number]
 
 ## Time consumption on experiments
 
-These experiments are run under the Colab default setting.
+These experiments are run under the Colab default setting(T4).
 
 + [PyGaggle: Baselines on MS MARCO Document Retrieval](https://github.com/castorini/pygaggle/blob/master/docs/experiments-msmarco-document.md): It takes about 4 hours to re-rank each half subset.
 
