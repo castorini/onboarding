@@ -4,6 +4,10 @@
 
 We have resource allocations from Compute Canada for most of [their supercomputers](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/). To request access, create an account on their [website](http://ccdb.computecanada.ca) and follow [these instructions](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/). Jimmy's CCRI is `ssi-230-01`.
 
++ The use of your institutional username as your CC username is encouraged.
+
++ Once you have submitted your application, you will receive your confirmation email. Don't forget to click on the confirmation link indicated in the email.
+
 There are three main clusters, graham, cedar, and beluga, all of which you can login to with your CC credentials: `ssh USER@CLUSTERNAME.computecanada.ca`.
 
 [CC Documentation](<https://docs.computecanada.ca/wiki/Compute_Canada_Documentation>) provides all details. From `Resources` on the left hand side you can check available computing resources in each cluster. The rest of the document will be based on cedar, which I have the most experience with, though other clusters are also very similar in terms of how to use them.
