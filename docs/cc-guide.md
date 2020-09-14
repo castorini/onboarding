@@ -98,7 +98,7 @@ Other useful SLURM-related commands:
 * `sinfo`: check cluster computation nodes
 * `squeue`, especially `squeue -u USER`: check running jobs, how much resource was asked, whether they are running or not, how much time is left, which nodes are allocated to them, etc. You can ssh to nodes on which your jobs are running.
 * `scancel JOB_ID`: cancel the job
-
+* `module load PACKAGE`: make various software packages available, changes and sets environment variables. You may need `module load java` before running experiments.
 
 
 These are the basic ways to use CC. If you have any questions, feel free to bug me (Jayden@slack) or check CC documentation.
