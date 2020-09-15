@@ -25,6 +25,10 @@ If you're interested in working on question answering, start with:
 
 Here's a bunch of tasks our group is interested in tackling:
 
+For Passage and Document Ranking:
+
++ Bajaj, Payal, et al. [Ms marco: A human generated machine reading comprehension dataset.](https://microsoft.github.io/msmarco/) arXiv preprint arXiv:1611.09268 (2016). 
+
 For Fact Verification:
 
 + Thorne, James, et al. [FEVER: a large-scale dataset for fact extraction and verification.](hhttps://arxiv.org/abs/1803.05355) arXiv preprint arXiv:1803.05355 (2018).
