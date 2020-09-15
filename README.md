@@ -20,3 +20,16 @@ If you're interested in working on text ranking (i.e., search), start with:
 If you're interested in working on question answering, start with:
 
 + Wei Yang, Yuqing Xie, Aileen Lin, Xingyu Li, Luchen Tan, Kun Xiong, Ming Li, and Jimmy Lin. [End-to-End Open-Domain Question Answering with BERTserini.](https://www.aclweb.org/anthology/N19-4013/) Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics (Demonstrations) (NAACL 2019), pages 72-77, June 2019, Minneapolis, Minnesota.
+
+## The TODO list
+
+Here's a bunch of tasks our group is interested in tackling:
+
+For Fact Verification:
+
++ Thorne, James, et al. [FEVER: a large-scale dataset for fact extraction and verification.](hhttps://arxiv.org/abs/1803.05355) arXiv preprint arXiv:1803.05355 (2018).
++ Wadden, David, et al. [Fact or Fiction: Verifying Scientific Claims.](https://arxiv.org/abs/2004.14974) arXiv preprint arXiv:2004.14974 (2020).
+
+For Knowledge Intensive Language Tasks in general:
+
++ Petroni, Fabio, et al. [KILT: a Benchmark for Knowledge Intensive Language Tasks.](https://arxiv.org/abs/2009.02252) arXiv preprint arXiv:2009.02252 (2020).
