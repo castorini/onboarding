@@ -31,7 +31,7 @@ For Passage and Document Ranking:
 
 For Fact Verification:
 
-+ Thorne, James, et al. [FEVER: a large-scale dataset for fact extraction and verification.](hhttps://arxiv.org/abs/1803.05355) arXiv preprint arXiv:1803.05355 (2018).
++ Thorne, James, et al. [FEVER: a large-scale dataset for fact extraction and verification.](https://arxiv.org/abs/1803.05355) arXiv preprint arXiv:1803.05355 (2018).
 + Wadden, David, et al. [Fact or Fiction: Verifying Scientific Claims.](https://arxiv.org/abs/2004.14974) arXiv preprint arXiv:2004.14974 (2020).
 
 For Knowledge Intensive Language Tasks in general:
