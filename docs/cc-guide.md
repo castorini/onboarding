@@ -4,6 +4,10 @@
 
 We have resource allocations from Compute Canada for most of [their supercomputers](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/). To request access, create an account on their [website](http://ccdb.computecanada.ca) and follow [these instructions](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/). Jimmy's CCRI is `ssi-230-01`.
 
++ The use of your institutional username as your CC username is encouraged.
+
++ Once you have submitted your application, you will receive your confirmation email. Don't forget to click on the confirmation link indicated in the email.
+
 There are three main clusters, graham, cedar, and beluga, all of which you can login to with your CC credentials: `ssh USER@CLUSTERNAME.computecanada.ca`.
 
 [CC Documentation](<https://docs.computecanada.ca/wiki/Compute_Canada_Documentation>) provides all details. From `Resources` on the left hand side you can check available computing resources in each cluster. The rest of the document will be based on cedar, which I have the most experience with, though other clusters are also very similar in terms of how to use them.
@@ -40,7 +44,7 @@ There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
   * `gres` specifies what and how many GPUs you need (check <https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm>). Remove it if you don't need GPUs.
 
-  * The final `--pty zsh` is for using `zsh`. If you prefer bash (huh? why would anyone not like oh-my-zsh?) simply remove this arg.
+  * The final `--pty zsh` is for using `zsh`. If you prefer bash (huh? why would anyone not like oh-my-zsh?) simply change this arg to `--pty bash`.
 
   * Normally you also need to specify which resource account (i.e., jimmy's account, not yours) to charge for your job. However, I doubt you'll need to change it for different jobs, so a more convenient way is to set the following environment variables:
 
@@ -94,7 +98,7 @@ Other useful SLURM-related commands:
 * `sinfo`: check cluster computation nodes
 * `squeue`, especially `squeue -u USER`: check running jobs, how much resource was asked, whether they are running or not, how much time is left, which nodes are allocated to them, etc. You can ssh to nodes on which your jobs are running.
 * `scancel JOB_ID`: cancel the job
-
+* `module load PACKAGE`: make various software packages available, changes and sets environment variables. You may need `module load java` before running experiments.
 
 
 These are the basic ways to use CC. If you have any questions, feel free to bug me (Jayden@slack) or check CC documentation.
