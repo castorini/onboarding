@@ -100,5 +100,25 @@ Other useful SLURM-related commands:
 * `scancel JOB_ID`: cancel the job
 * `module load PACKAGE`: make various software packages available, changes and sets environment variables. You may need `module load java` before running experiments.
 
+### Create a virtual environment
+
+There are two ways to create a virtual environment on Compute Canada: Virtualenv and Anaconda.
+These tools allow users to create virtual environments within which you can easily install Python packages.
+Compute Canada asks users not to install Anaconda on their clusters for various reasons, but there are very few cases where only conda installs work. Hence, use Anaconda if Virtualenv doesn't work.
+
+* Virtualenv: 
+  ```
+  module load python/3.6                        # load the version of your choice
+  virtualenv --no-download ~/ENV                # To create a virtual environment, where ENV is the name of the environment
+  source ~/ENV/bin/activate
+  pip install --no-index --upgrade pip          # You should also upgrade pip
+  pip install --no-index --upgrade setuptools   # You should also upgrade setuptools
+  deactivate                                    # You can exit the current environment
+  ```  
+  
+  Use `pip install PACKAGE --no-index` to install python packages. The `--no-index` option enables you to install only from the Compute Canada wheels compiled by Compute Canada staff to prevent issues with missing or conflicting dependencies (check <https://docs.computecanada.ca/wiki/Python> to find more available packages). If you omit the `--no-index` option, pip will search both PyPI and local packages, and use the latest version.
+  
+* Anaconda: 
+  One common workflow is to install Anaconda to your home directory for local Python package management, then save all data and models to the temporary `~/scratch` directory, which has a much higher disk quota.
 
 These are the basic ways to use CC. If you have any questions, feel free to bug me (Jayden@slack) or check CC documentation.
