@@ -4,6 +4,21 @@ This repository introduces several methods for users without local GPU resources
 
 + [Transform Google Colab to a GPU instance with full SSH access](docs/colab-instructions.md)
 + [Guide to ComputeCanada GPU resources](docs/cc-guide.md)
++ [Guide to use UW GPU resources](docs/school-gpu.md)
+
+## Reading List
+Here is a book provides an overview of text ranking with neural network architectures.
+
++ Jimmy Lin, Rodrigo Nogueira, Andrew Yates. [Pretrained Transformers for Text Ranking: BERT and Beyond.](https://arxiv.org/abs/2010.06467) _arXiv:2010.06467_, October 2020.
+
+It's long, so take your time to digest.
+However, following sections are highly recommended to read before you start working on any specific task. It provides basic knowledge to further explore everything, and it will let you know what we are fighting for!
+
+- 1.1 Text Ranking Problems
+- 2.0 Setting the Stage
+- 3.1 High-Level Overview of BERT
+- 3.2 monoBERT
+
 
 ## State-of-the-Group in Information Access
 
