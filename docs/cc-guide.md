@@ -36,7 +36,7 @@ There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
 * Interactive: you get a shell on the computing node and run jobs as usual. Useful when you are running experiments for the first time and need to debug here and there. Command:
 
-  `srun --mem=64G --cpus-per-task=2 --time=24:0:0 --gres=gpu:v100l:1 --pty zsh`
+  `srun --mem=32G --cpus-per-task=2 --time=24:0:0 --gres=gpu:v100l:1 --pty zsh`
 
   Most arguments are self-explanatory.
 
@@ -69,12 +69,12 @@ There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
   ```
   #!/bin/bash
-  #SBATCH --mem=64G 
+  #SBATCH --mem=32G 
   #SBATCH --cpus-per-task=2 
   #SBATCH --time=24:0:0 
   #SBATCH --gres=gpu:v100l:1
   
-  export CUDA_AVAILABLE_DEVICES=0,1  # so you can use both gpus you ask for
+  export CUDA_AVAILABLE_DEVICES=0  # 0,1 if you want to use say 2 gpus you ask for
   
   dataset=$1
   python my_job.py --dataset $dataset
