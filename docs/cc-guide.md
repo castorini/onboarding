@@ -120,5 +120,21 @@ Compute Canada asks users not to install Anaconda on their clusters for various 
   
 * Anaconda: 
   One common workflow is to install Anaconda to your home directory for local Python package management, then save all data and models to the temporary `~/scratch` directory, which has a much higher disk quota.
+  
+  Please follow this guide to install Anaconda on CC: https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart
+
+* Miscellaneous:
+
+  Some packages can only be installed by Anaconda for non-root users. For example, one way to install the `faiss` package through conda is:
+
+  ```shell
+  # CPU version only
+  conda install faiss-cpu -c pytorch
+  
+  # GPU version
+  conda install faiss-gpu cudatoolkit=8.0 -c pytorch # For CUDA8
+  conda install faiss-gpu cudatoolkit=9.0 -c pytorch # For CUDA9
+  conda install faiss-gpu cudatoolkit=10.0 -c pytorch # For CUDA10
+  ```
 
 These are the basic ways to use CC. If you have any questions, feel free to bug me (Jayden@slack) or check CC documentation.
