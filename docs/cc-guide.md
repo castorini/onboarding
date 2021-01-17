@@ -84,7 +84,7 @@ There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
   Then you can simply run `sbatch job.sh DATASET`. By putting your job inside a script like this, you can, in interactive mode, run the same thing by `./job.sh DATASET`, since `#SBATCH` options are neglected there.
 
-  To request for a whole node, set these arguments:
+  You can request for a whole node on Slurm, which can shorten wait times. Set these arguments:
 
   ```
   #!/bin/bash
