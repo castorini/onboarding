@@ -84,7 +84,14 @@ There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
   Then you can simply run `sbatch job.sh DATASET`. By putting your job inside a script like this, you can, in interactive mode, run the same thing by `./job.sh DATASET`, since `#SBATCH` options are neglected there.
 
+  You can request for a whole node on SLURM, which can shorten wait times. Set these arguments:
 
+  ```
+  #!/bin/bash
+  #SBATCH --mem=0
+  #SBATCH --cpus-per-task=32
+  #SBATCH --gres=gpu:v100l:4
+  ```
 
 SLURM provides a number of useful environment variables in both interactive and non-interactive modes. The most important two are:
 
