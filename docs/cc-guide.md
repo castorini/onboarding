@@ -36,13 +36,13 @@ There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
 * Interactive: you get a shell on the computing node and run jobs as usual. Useful when you are running experiments for the first time and need to debug here and there. Command:
 
-  `srun --mem=64G --cpus-per-task=2 --time=24:0:0 --gres=gpu:v100l:2 --pty zsh`
+  `srun --mem=32G --cpus-per-task=2 --time=24:0:0 --gres=gpu:v100l:1 --pty zsh`
 
   Most arguments are self-explanatory.
 
-  *  `time` is the upper bound for your job - if the job runs longer than what you specified, you will be kicked out of the computing node; however don't set it to much longer than needed, as that will lower your SLURM priority.
+  *  `time` is the upper bound for your job - if the job runs longer than what you specified, you will be kicked out of the computing node; however don't set it to much longer than needed, as that will lower your SLURM priority. If you are just debugging go with something less than 3 hours (for instance `1:42:00`).
 
-  * `gres` specifies what and how many GPUs you need (check <https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm>). Remove it if you don't need GPUs.
+  * `gres` specifies what and how many GPUs you need (check <https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm>). Remove it if you don't need GPUs. If you want say 2 GPUs, change this to `gpu:v100l:2` instead. Make sure you are actually utilizing all your GPUs using `nvidia-smi` while your experiments run.
 
   * The final `--pty zsh` is for using `zsh`. If you prefer bash (huh? why would anyone not like oh-my-zsh?) simply change this arg to `--pty bash`.
 
@@ -69,12 +69,12 @@ There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
   ```
   #!/bin/bash
-  #SBATCH --mem=64G 
+  #SBATCH --mem=32G 
   #SBATCH --cpus-per-task=2 
   #SBATCH --time=24:0:0 
-  #SBATCH --gres=gpu:v100l:2
+  #SBATCH --gres=gpu:v100l:1
   
-  export CUDA_AVAILABLE_DEVICES=0,1  # so you can use both gpus you ask for
+  export CUDA_AVAILABLE_DEVICES=0  # 0,1 if you want to use say 2 gpus you ask for
   
   dataset=$1
   python my_job.py --dataset $dataset
