@@ -37,6 +37,9 @@ If you're interested in working on question answering, start with
 
 + Wei Yang, Yuqing Xie, Aileen Lin, Xingyu Li, Luchen Tan, Kun Xiong, Ming Li, and Jimmy Lin. [End-to-End Open-Domain Question Answering with BERTserini.](https://www.aclweb.org/anthology/N19-4013/) Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics (Demonstrations) (NAACL 2019), pages 72-77, June 2019, Minneapolis, Minnesota.
 
+## Task: Training monoBERT from Scratch
+
+
 ## The TODO list
 
 Here's a bunch of tasks our group is interested in tackling:
