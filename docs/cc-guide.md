@@ -145,3 +145,9 @@ Compute Canada asks users not to install Anaconda on their clusters for various 
   ```
 
 These are the basic ways to use CC. If you have any questions, feel free to bug me (Jayden@slack) or check CC documentation.
+
+### Useful links
+* [Slurm job running](https://docs.computecanada.ca/wiki/Running_jobs)
+* [Compute Canada for Machine Learning](https://docs.computecanada.ca/wiki/Tutoriel_Apprentissage_machine/en)
+* [Using GPUs with Slurm](https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm)
+* [A simple script to check cluster jobs](https://github.com/t-k-/cc-orchestration/blob/a5f4484e03545ede66fd3165c54d8c6d2dc80596/cc-orchestration.sh)
