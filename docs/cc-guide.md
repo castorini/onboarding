@@ -180,6 +180,7 @@ import torch
 import time
 import datetime
 import torch.distributed as dist
+from torch.nn.parallel import DistributedDataParallel as DDP
 
 def main(init_method):
     ngpus_per_node = torch.cuda.device_count()
@@ -202,18 +203,24 @@ def main(init_method):
         init_method=init_method,
         world_size=n_nodes,
         rank=node_id,
-        timeout=datetime.timedelta(0, 10) # 10s timeout
+        timeout=datetime.timedelta(0, 10) # 10s connection timeout
     )
-    print('Enter Torch DDP!')
-    time.sleep(10) # wait for other nodes to connect master node
+    print('Enter Torch DDP.', flush=True)
+    dist.barrier(device_ids=[0]) # wait for other nodes to connect master node
+    
+    # do training here...
+    # everything is like usual except we wrap our model using: model = DDP(model)
+    # load model do training just like normal here, 
+    
     dist.destroy_process_group()
+    print('Exit Torch DDP.', flush=True)
 
 
 if __name__=='__main__':
    fire.Fire(main)
 ```
 
-Program output:
+#### `sbatch` output
 ```
 $ sbatch sbatch.sh 
 Submitted batch job 51384034
@@ -221,16 +228,19 @@ $ squeue -u w32zhong
             JOBID     USER              ACCOUNT           NAME  ST  TIME_LEFT NODES CPUS TRES_PER_N MIN_MEM NODELIST (REASON) 
          51384034 w32zhong     def-jimmylin_gpu      sbatch.sh   R       9:57     4    8      gpu:1     32G gra[956,972,974-975] (None) 
 $ cat gra956-51384034.out 
-++ hostname
-+ srun python pytorch-test.py tcp://gra956:8921
-{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 0, 'proc_id': 0}
-Enter Torch DDP!
-{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 3, 'proc_id': 3}
-Enter Torch DDP!
-{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 2, 'proc_id': 2}
-Enter Torch DDP!
-{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 1, 'proc_id': 1}
-Enter Torch DDP!
++ srun python pytorch-test.py tcp://gra972:8921
+{'available_gpus': ['0'], 'init_method': 'tcp://gra972:8921', 'job_id': 51398801, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 0, 'proc_id': 0}
+Enter Torch DDP.
+{'available_gpus': ['0'], 'init_method': 'tcp://gra972:8921', 'job_id': 51398801, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 2, 'proc_id': 2}
+Enter Torch DDP.
+{'available_gpus': ['0'], 'init_method': 'tcp://gra972:8921', 'job_id': 51398801, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 3, 'proc_id': 3}
+Enter Torch DDP.
+{'available_gpus': ['0'], 'init_method': 'tcp://gra972:8921', 'job_id': 51398801, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 1, 'proc_id': 1}
+Enter Torch DDP.
+Exit Torch DDP.
+Exit Torch DDP.
+Exit Torch DDP.
+Exit Torch DDP.
 ```
 
 ### Useful links
