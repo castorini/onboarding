@@ -208,9 +208,8 @@ def main(init_method):
     print('Enter Torch DDP.', flush=True)
     dist.barrier(device_ids=[0]) # wait for other nodes to connect master node
     
-    # do training here...
+    # load the model to CUDA device and do training here...
     # everything is like usual except we wrap our model using: model = DDP(model)
-    # load model do training just like normal here, 
     
     dist.destroy_process_group()
     print('Exit Torch DDP.', flush=True)
