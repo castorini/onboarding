@@ -125,7 +125,7 @@ Compute Canada asks users not to install Anaconda on their clusters for various 
   
   Use `pip install PACKAGE --no-index` to install python packages. The `--no-index` option enables you to install only from the Compute Canada wheels compiled by Compute Canada staff to prevent issues with missing or conflicting dependencies (check <https://docs.computecanada.ca/wiki/Python> to find more available packages). If you omit the `--no-index` option, pip will search both PyPI and local packages, and use the latest version.
   
-  From time to time, packages provided by Compute Canada cause dependency problems. To completely avoid Compute Canada packages and only search for PyPI packages when using `pip`, reset the following two environment variables
+  From time to time, packages provided by Compute Canada cause dependency problems. To completely avoid Compute Canada packages and only search for PyPI packages when using `pip`, reset the following two environment variables _before creating the virtualenv/conda environment_:
   ```
   PYTHONPATH=""
   PIP_CONFIG_FILE=""
