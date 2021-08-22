@@ -146,6 +146,93 @@ Compute Canada asks users not to install Anaconda on their clusters for various 
 
 These are the basic ways to use CC. If you have any questions, feel free to bug me (Jayden@slack) or check CC documentation.
 
+### Code example (PyTorch)
+The DistributedDataParallel class (or DDP) is [recommended by PyTorch maintainers](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html#comparison-between-dataparallel-and-distributeddataparallel) to use multiple GPUs, whether they are all on a single node, or distributed across multiple nodes.
+
+The following is a minimal working code to run a noop DDP job across 4 nodes.
+
+#### sbatch.sh
+```bash
+#!/bin/bash
+#SBATCH --nodes=4           # total nodes
+#SBATCH --gres=gpu:1        # how many GPUs per node
+#SBATCH --cpus-per-task=2   # Cores proportional to GPUs: 6 on Cedar, 16 on Graham.
+#SBATCH --mem=32gb          # Memory proportional to GPUs: 32000 Cedar, 64000 Graham.
+#SBATCH --time=0-00:10
+#SBATCH --output=%N-%j.out
+
+export NCCL_BLOCKING_WAIT=1  # Set this variable to use the NCCL backend
+
+export SLURM_ACCOUNT=def-jimmylin
+export SBATCH_ACCOUNT=$SLURM_ACCOUNT
+export SALLOC_ACCOUNT=$SLURM_ACCOUNT
+
+set -x
+srun python pytorch-test.py tcp://$(hostname):8921
+```
+
+#### pytorch-test.py
+
+```python
+import os
+import fire
+import torch
+import time
+import datetime
+import torch.distributed as dist
+
+def main(init_method):
+    ngpus_per_node = torch.cuda.device_count()
+    n_tasks = int(os.environ.get("SLURM_NTASKS"))
+    local_id = int(os.environ.get("SLURM_LOCALID"))
+    proc_id = int(os.environ.get("SLURM_PROCID"))
+    job_id = int(os.environ.get("SLURM_JOBID"))
+    n_nodes = int(os.environ.get("SLURM_JOB_NUM_NODES"))
+    node_id = int(os.environ.get("SLURM_NODEID"))
+    available_gpus = list(os.environ.get('CUDA_VISIBLE_DEVICES').replace(',',""))
+
+    # print local variables
+    __l__=locals()
+    print({k: __l__[k] for k in filter(lambda x: not x.startswith('__'), dir())})
+
+    torch.cuda.set_device(int(available_gpus[0]))
+
+    dist.init_process_group(
+        backend="nccl", # can be mpi, gloo, or nccl
+        init_method=init_method,
+        world_size=n_nodes,
+        rank=node_id,
+        timeout=datetime.timedelta(0, 10) # 10s timeout
+    )
+    print('Enter Torch DDP!')
+    time.sleep(10) # wait for other nodes to connect master node
+    dist.destroy_process_group()
+
+
+if __name__=='__main__':
+   fire.Fire(main)
+```
+
+Program output:
+```
+$ sbatch sbatch.sh 
+Submitted batch job 51384034
+$ squeue -u w32zhong
+            JOBID     USER              ACCOUNT           NAME  ST  TIME_LEFT NODES CPUS TRES_PER_N MIN_MEM NODELIST (REASON) 
+         51384034 w32zhong     def-jimmylin_gpu      sbatch.sh   R       9:57     4    8      gpu:1     32G gra[956,972,974-975] (None) 
+$ cat gra956-51384034.out 
+++ hostname
++ srun python pytorch-test.py tcp://gra956:8921
+{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 0, 'proc_id': 0}
+Enter Torch DDP!
+{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 3, 'proc_id': 3}
+Enter Torch DDP!
+{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 2, 'proc_id': 2}
+Enter Torch DDP!
+{'available_gpus': ['0'], 'init_method': 'tcp://gra956:8921', 'job_id': 51384034, 'local_id': 0, 'n_nodes': 4, 'n_tasks': 4, 'ngpus_per_node': 1, 'node_id': 1, 'proc_id': 1}
+Enter Torch DDP!
+```
+
 ### Useful links
 * [Slurm job running](https://docs.computecanada.ca/wiki/Running_jobs)
 * [Compute Canada for Machine Learning](https://docs.computecanada.ca/wiki/Tutoriel_Apprentissage_machine/en)
