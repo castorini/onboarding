@@ -15,7 +15,7 @@ Once you have received an email response, create a Google cloud project, turn on
 
 Then you will receive another email regarding specific quota and cloud node region/zone restrictions offered by Google cloud.
 Notice that this free 31-day trial is only available for the zones listed in the email.
-Be sure to create in those zones to avoid being charged.
+Be sure to create in those zones to avoid being charged. (use `gcloud compute operations list` to view instances you have created, it is also a useful command to double-check if the zone matches free TPU restriction)
 
 
 Follow [gcloud SDK installation](https://cloud.google.com/sdk/docs/install) and [this Quickstart](https://cloud.google.com/tpu/docs/pytorch-quickstart-tpu-vm) to install command-line interface `gcloud` and create your ComputeEngine and TPU cloud instances.
