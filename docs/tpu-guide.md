@@ -25,11 +25,17 @@ While your Cloud TPUs are free, you’ll still be charged for the other cloud se
 TPU specs can be found here: https://cloud.google.com/tpu/docs/tpus
 
 If you are a student, you can [redeem](https://cloud.google.com/billing/docs/how-to/edu-grants#redeem) USD 300 credits education grants, this introductory credit may help you offset these costs.
-To minimize cost, you may change the default ComputeEngine instance to lower configuration (e.g., `n1-standard-8` instead of `n1-standard-16` as instructed by [the Quickstart guide](https://cloud.google.com/tpu/docs/pytorch-quickstart-tpu-vm)).
-
+To minimize cost while compensating the large memory need to do data-parallel training for a large model, you may change the suggested ComputeEngine configuration (i.e., `n1-standard-16`) to high-memory instances such as `n1-highmem-16`.
+In some scenarios, especially during pretraining, when multiple copies of a large dataset need to be loaded into main memory, you can increase memory very cheaply by creating a swap partition:
+```sh
+sudo fallocate -l 20G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+```
 
 For PyTorch users, once you have set up and connected to the TPU node, follow [Pytorch XLA tutorial](https://pytorch.org/xla/release/1.9/index.html) to rewrite your program so it can adapt to the Pytorch XLA compiler and run on TPU device.
-For a single XLA Device, a minimal change of code is good-to-go:
+For a single XLA core, a minimal change of code is good-to-go:
 
 ```python
 import torch_xla.core.xla_model as xm
