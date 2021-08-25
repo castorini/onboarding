@@ -1,7 +1,7 @@
 # Guide to TPUs
 The official Google documentation on Cloud TPU covers a ton of details, this guide aims to offer a very summarized guidance.
 
-As of the time of writing, Google offers a free TPU trial for one 31 days.
+As of the time of writing, Google offers a free TPU trial for 31 days.
 The typical quota includes
 * 5 on-demand Cloud TPU v2-8
 * 100 preemptible Cloud TPU v2-8 devices
