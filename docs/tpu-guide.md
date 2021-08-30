@@ -1,6 +1,7 @@
 # Guide to TPUs
 The official Google documentation on Cloud TPU covers a ton of details, this guide aims to offer a very summarized guidance.
 
+## Free trial application
 As of the time of writing, Google offers a free TPU trial for 31 days.
 The typical quota includes
 * 5 on-demand Cloud TPU v2-8
@@ -17,7 +18,7 @@ Then you will receive another email regarding specific quota and cloud node regi
 Notice that this free 31-day trial is only available for the zones listed in the email.
 Be sure to create in those zones to avoid being charged. (use `gcloud compute operations list` to view instances you have created, it is also a useful command to double-check if the zone matches free TPU restriction)
 
-
+## Quickstart
 Follow [gcloud SDK installation](https://cloud.google.com/sdk/docs/install) and [this Quickstart](https://cloud.google.com/tpu/docs/pytorch-quickstart-tpu-vm) to install command-line interface `gcloud` and create your ComputeEngine and TPU cloud instances.
 The ComputeEngine is necessary to access TPU since the TPU node does not expose public addresses to be accessed.
 While your Cloud TPUs are free, you’ll still be charged for the other cloud services you use.
@@ -47,7 +48,7 @@ device = xm.xla_device()
   xm.mark_step()
 ```
 
-To programally print your device memory,
+To programally print the memory of one TPU core,
 ```python
 import torch_xla
 import torch_xla.core.xla_model as xm
@@ -55,5 +56,6 @@ dev = xm.xla_device()
 dev_info = torch_xla.core.xla_model.get_memory_info(dev)
 total_mem = dev_info['kb_total'] / 1000
 print('TPU memory: ', total_mem)
-
 ```
+
+In TPU hardware, a chip consists of two cores, in a `V2-8` or `V3-8` hardware setting, each TPU unit contains 4 chips, so in total 8 cores per TPU unit.
