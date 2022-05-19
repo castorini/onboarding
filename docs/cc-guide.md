@@ -249,3 +249,4 @@ Exit Torch DDP.
 * [Compute Canada Wiki for PyTorch](https://docs.computecanada.ca/wiki/PyTorch)
 * [Using GPUs with Slurm](https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm)
 * [A simple script to check cluster jobs](https://github.com/t-k-/cc-orchestration/blob/a5f4484e03545ede66fd3165c54d8c6d2dc80596/cc-orchestration.sh)
+* [Available software](https://docs.alliancecan.ca/wiki/Available_software)
