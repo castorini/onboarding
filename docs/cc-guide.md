@@ -34,6 +34,8 @@ Always keep in mind that SLURM deals with a lot of requests, so (1) your jobs do
 
 There are (at least) 2 ways to submit a job: interactive and non-interactive.
 
+If your job's maximum time is longer than 24 hours, please submit that job in a non-interactive way because the time limit of interactive jobs is 24 hours.
+
 * Interactive: you get a shell on the computing node and run jobs as usual. Useful when you are running experiments for the first time and need to debug here and there. Command:
 
   `srun --mem=32G --cpus-per-task=2 --time=24:0:0 --gres=gpu:v100l:1 --pty zsh`
