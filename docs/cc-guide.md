@@ -113,7 +113,7 @@ Other useful SLURM-related commands:
 
 There are two ways to create a virtual environment on Compute Canada: Virtualenv and Anaconda.
 These tools allow users to create virtual environments within which you can easily install Python packages.
-Compute Canada asks users not to install Anaconda on their clusters for various reasons, but there are very few cases where only conda installs work. Hence, use Anaconda if Virtualenv doesn't work.
+Compute Canada asks users not to install Anaconda on their clusters for various reasons, but there are cases where only conda installs work. Hence, use Anaconda if Virtualenv doesn't work.
 
 * Virtualenv: 
   ```
@@ -126,6 +126,12 @@ Compute Canada asks users not to install Anaconda on their clusters for various 
   ```  
   
   Use `pip install PACKAGE --no-index` to install python packages. The `--no-index` option enables you to install only from the Compute Canada wheels compiled by Compute Canada staff to prevent issues with missing or conflicting dependencies (check <https://docs.computecanada.ca/wiki/Python> to find more available packages). If you omit the `--no-index` option, pip will search both PyPI and local packages, and use the latest version.
+  
+  From time to time, packages provided by Compute Canada cause dependency problems. To completely avoid Compute Canada packages and only search for PyPI packages when using `pip`, reset the following two environment variables _before creating the virtualenv/conda environment_:
+  ```
+  PYTHONPATH=""
+  PIP_CONFIG_FILE=""
+  ```
   
 * Anaconda: 
   One common workflow is to install Anaconda to your home directory for local Python package management, then save all data and models to the temporary `~/scratch` directory, which has a much higher disk quota.
