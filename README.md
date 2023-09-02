@@ -1,8 +1,10 @@
 # Onboarding Guide
 
+**Undergraduates at the University of Waterloo**: if you want to work with me read [this guide](ura.md) first.
+
 ## 🧱 Foundations of Retrieval
 
-This onboarding path comprises the following lessons:
+This onboarding path provides the starting point of working in our group and comprises the following lessons:
 
 1. Begin your journey [here](https://github.com/castorini/anserini/blob/master/docs/start-here.md). 
 2. [BM25 Baselines for MS MARCO Passage Ranking **in Anserini**](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-passage.md).
