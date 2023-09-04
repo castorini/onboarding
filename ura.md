@@ -23,6 +23,10 @@ By "working through", I mean follow all the instructions, reproduce the results 
 You can send me an email after you've progressed through the entire path.
 In you email, mention the phrase "banana odyssey": this lets me know you've actually read this document.
 
+The onboarding exercises are meant to be doable on any reasonably modern laptop, although there are known issues with Windows.
+If you're having issues, the [student teaching hosts](https://uwaterloo.ca/computer-science-computing-facility/teaching-hosts) are available for UWaterloo CS students.
+See [this issue](https://github.com/castorini/pyserini/issues/1611#issuecomment-1703253700) for additional details.
+
 **Note:** Don't bother emailing me until you've done the steps above; if you do, I'll just refer you to this document.
 Think of the above as an "initial screen", which is necessary because I get many requests to work with me and don't have time to respond to them all in a customized manner.
 The onboarding path provides an opportunity to see if you're truly interested in my work; by working through (even a part of) the exercises, you might discover that it's not interesting to you...
