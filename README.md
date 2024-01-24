@@ -17,7 +17,8 @@ This onboarding path provides the starting point of working in our group and com
 3. [BM25 Baseline for MS MARCO Passage Ranking **in Pyserini**](https://github.com/castorini/pyserini/blob/master/docs/experiments-msmarco-passage.md).
 4. [A Conceptual Framework for Retrieval](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework.md)
 5. [Contriever Baseline for NFCorpus](https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md)
-6. [A Deeper Dive into Dense and Sparse Representations](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework2.md)
+6. [Learned Sparse Representations](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-passage-splade-pp-ed.md)
+7. [A Deeper Dive into Dense and Sparse Representations](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework2.md)
 
 When you are proceeding along the onboarding path, please _don't_ send a separate pull request for each file.
 Instead, consolidate your edits into a single pull request for each repo.
