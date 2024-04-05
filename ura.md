@@ -60,13 +60,27 @@ After the initial screen, you can choose from three character classes (the two m
 + **Blocks stacker.** You want to work on end-to-end applications and interfaces, e.g., composing different building blocks into usable software like our [Covidex](http://covidex.ai/) project.
 
 You can get a sense of what each of my research projects are up to by looking at the recent commits, issues, etc.
-Typically, I'll pass you off to one of my graduate students who's leading the project you're interested in, to serve as a mentor.
+After the initial screen, here's what the option space looks like:
 
-Our job is to find you tasks that:
+### Who do I work with and what do I work on?
+
+There are two common paths: sometimes, I'll pass you off to graduate students who need help with something they're working on, and they can serve as mentors.
+Sometimes, I'll work with you directly myself.
+
+Either way, our job is to find you tasks that:
 
 + are concrete and can be clearly described;
 + have clearly-defined success criteria; and,
 + provide learning opportunities for you.
+
+Of course, you can split your time to do both, but these are the tradeoffs:
+
+Working with my students, you'll likely get more "exciting" projects, but they are often more nebuous.
+
+Working directly with me, you'll likely get more "boring" tasks, because I spend a lot of time working on software tooling with the group.
+
+
+### Critical Path?
 
 One question you should answer is whether you'd like to be on the critical path for our research or work on a side project.
 The critical path refers to things that are blockers for our research, for example, that are needed for the next paper deadline.
@@ -77,6 +91,8 @@ Being on the critical path means greater time commitment, and that we'll be afte
 But this likely means you'll get more attention and engagement from me and my graduate students.
 A side project is more likely more open-ended, but you'll likely get less focused direction and mentoring.
 For these, you'll really have to take the initiative.
+
+### Formal or Informal?
 
 Another issue to think about is whether you wish to do a [_formal_ URA](https://cs.uwaterloo.ca/current-undergraduate-students/research-opportunities/undergraduate-research-assistantship-ura-program).
 A formal URA gets paid and I expect commitment on the order of ten hours a week.
@@ -102,10 +118,10 @@ Yes, seriously.
 If I don't hear from you after the first week, I won't think any less of you.
 Life is short, everyone has conflicting demands on their time, and you should only work on something if you're interested in it.
 
-My advice is simple: How much you get out of working with me is directly dependent on how much work you put in.
+My advice is simple: How much you get out of working with our group is directly dependent on how much work you put in.
 The single most important trait in successfully working with me, I believe, is being _self-motivated_; generally, technical background isn't an issue &mdash; you got into Computer Science at Waterloo, after all.
 With me, there are no deadlines.
-How much interaction you get with me depends on how fast you _choose_ to work.
+How much interaction you get with me and my graduate students depends on how fast you _choose_ to work.
 Starting with the "Initial Screen", once you finish something, I'll (try to) give you something else to work on.
 If you finish it in a day, I'll give you something else to work on, and the same after that.
 Those things will increase in complexity and provide you bigger learning opportunities... until you either stop working (had enough), or you decide you like them so much you want a greater level of commitment (e.g., you want to do a Masters with me).
