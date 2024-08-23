@@ -114,6 +114,30 @@ Note that, at least in the beginning, it may not be uncommon for me to assign th
 Because of the voluntary nature of URAs, it is hard for me gauge a student's level of interest, or when (if ever) something will be completed.
 Typically, I'll try to coordinate and reduce duplication on GitHub issues, but as tasks move on and off the critical path to my other projects, preemption is a possibility.
 
+---
+
+I've been meaning to write this up, but just haven't had the time, so here's the tl;dr -
+
+**Q: once I've onboarded, who do I work with? Your two options are:**
+
+1. Work with me directly. However, I work on more "boring" stuff, like tooling, repro, UIs, etc. in our Anserini/Pyserini toolkits.
+2. Work with my grad students... who definitely have lots more exciting/research-y ideas, etc.
+
+Or, of course, you can do a mix of (1) and (2).
+
+For context, read this: https://arxiv.org/abs/2212.13534
+
+There are definitely pros and cons -
+
++ With (1), I have pretty strong expectations of you getting shit done and closing immediate issues.
++ With (1), you get direct interactions with me, and my tasks allow you to make observable, concrete progress. If you're looking for a rec for grad school... well, it ultimately needs to come from me, so giving me a chance to get to know you isn't a bad idea.
++ With (1), you will still get an opportunity to contribute to papers - but they'll be more along the lines of demos, resource papers, etc. - not your typical research paper.
++ With (2), my grad students are awesome, don't really have anything negative to say about them...
+
+You can always do a mix of (1) + (2), but that's going to be a rather larger time commitment.
+
+At the end of the day, it's your call... you work on what you want to work on!
+
 ## DL-fu and Muppet Trainer Character Development
 
 Many students want to become muppet trainers, and I have a relatively well-developed character development progression path.
