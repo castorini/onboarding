@@ -39,15 +39,15 @@ The onboarding path provides an opportunity to see if you're truly interested in
 ## What's the Deal with All This Reproduction?
 
 I believe strongly in open science.
-To the extent that I can (keeping in mind that my students are actually the ones doing the work), I insist that _all_ research is backed by open-source code.
+To the extent that I can (keeping in mind that my students are actually the ones doing most of the work), I insist that _all_ research is backed by open-source code.
 But not just open-source code, _usable_ open-source code.
 We (try not to) just throw shit over the wall, but release code that allows anyone to _reproduce_ (_repro_ for short) our work, i.e., you can run our code and get the same results.
 
-Almost always, the first tasks that I ask my URAs to do is to reproduce some existing piece of work.
+Almost always, the first tasks that I ask students (URAs and even new graduate students) to do is to reproduce some existing piece of work.
 This serves two purposes:
 
-+ For you, it offers an entry into our research. See if you like it.
-+ For my group, it provides an extra pair of eyes and hands to ensure that our results are reproducible.
++ For you, the student, it offers an entry into our research. See if you like it.
++ For me and my research group, reproduction efforts provide extra pairs of eyes and hands to ensure that our results are reproducible.
 
 Win-win, right?
 Along the way, feel free to improve the documentation, for example, fix a typo, clarify a confusing point, etc.
@@ -68,7 +68,7 @@ Side quests are encouraged!
 
 ## What Happens Next?
 
-After you've finished the onboarding, I'll send you a Slack invite and drop you into a channel that all the URAs "hang out" in.
+After you've finished the onboarding, I'll send you a Slack invite and drop you into a channel where all the URAs "hang out".
 It's a channel for high-level coordination.
 From there, DM groups and other channels get formed around specific tasks and projects.
 Sometimes, this channel is full of activity (particularly at the start of semesters), other times, it's relatively quiet.
@@ -77,26 +77,75 @@ Start by scrolling around and reading recent activity in the channel to find out
 We keep a [backlog](https://github.com/castorini/ura-projects/issues) of things for URAs to work on; worth browsing through, but may not be totally up to date.
 
 From here, your natural question is: Once I've onboarded, what do I do?
-Your two options are:
 
-1. Work with me directly.
-2. Work with my grad students.
+I'll answer that question with another question.
+I often give the following advice, which is applicable here: start at the end and work backwards.
 
-Of course, you can do a mix of (1) and (2).
+What do you hope to get out of the URA?
 
-### Working With Me
+Possible answers include:
 
-If you work directly with me, you'll likely be given tasks that are more focused on software engineering.
-I focus on things like tooling, UIs, and generally improving the experience in our Anserini/Pyserini toolkits.
-You might even call these tasks "boring"...
++ I want to learn what "research is all about".
++ I want to learn new skills.
++ I want to better prepare myself for graduate school.
++ I want a rec for graduate school.
++ I want to contribute to a paper and hopefully be included as a co-author.
++ I want to join Jimmy Lin's research group as a graduate student.
+
+So, start with your goal (or goals) in mind and work backwards, and "do" whatever best aligns.
+
+At a high-level, your three options are:
+
+1. Work on a task of mine.
+2. Help out one of my graduate students.
+3. Wow us.
+
+Of course, you can do a mix of all three.
+
+### Work on a Task of Mine
+
+I usually have a backlog of tasks I'd like to get done.
+If you work directly with me, you'll likely be given a task that is more focused on software engineering.
+My hacking these days focus mostly on things like tooling, UIs, and generally improving the experience in our Anserini/Pyserini toolkits.
+You might even call these tasks "boring".
 
 However, you get direct interactions with me, and my tasks allow you to make observable, concrete progress.
+In other words, you'll get "quick wins".
 If you're looking for a rec for grad school... well, it ultimately needs to come from me, so giving me a chance to get to know you isn't a bad idea.
+Of course, this is a double-edged sword: If you're highly capable and impress me, I can help you accomplish your goals.
+But on the other hand, I can see weaknesses and gaps as well.
 
-### Working With My Grad Students
+Working on my tasks (and completing them in a timely manner) builds credibility with me, and often "unlocks" more interesting research projects and multi-way interactions involving my graduate students.
 
-My graduate students are working on really exciting ideas, and they're often looking for help.
-You're welcome to help out.
+Note, it is _not_ the case that these tasks, despite their focus on software engineering in many cases, preclude publications.
+For example, this demo paper ["Vector Search with OpenAI Embeddings: Lucene Is All You Need"](https://dl.acm.org/doi/10.1145/3616855.3635691) started from just "hacking around" with different vector search implementations I had in mind.
+Here's an arXiv paper ["End-to-End Retrieval with Learned Dense and Sparse Representations Using Lucene"](https://arxiv.org/abs/2311.18503) that came out of "playing around" with [ONNX](https://onnx.ai/).
+
+Finally, a downside to working directly with me is that I might be "flaky" (from your perspective).
+Working with URAs is relatively low on my list of priorities, and my attention is often preempted by something more urgent, in which case I might not be able to respond in a timely manner.
+
+### Help Out One of My Graduate Students
+
+My graduate students are always working on really exciting ideas, and they're often looking for help.
+They'll post their ideas in the Slack channel, and you're welcome to join and help out.
+Typically, if you make significant contributions to a graduate student's project, you can expect to be included as a co-author on a paper.
+
+URAs working with graduate students often happens without my knowledge:
+This can either be a bug or a feature.
+It's a bug because you don't get to interact with me.
+It's a feature because if you "fail", I never know about it.
+
+At a high-level, working with my graduate students has the opposite tradeoffs as working directly with me:
+You'll likely get to work on more "interesting" things, but they may be less well-formed and more vague.
+And I'll only hear about your successes indirectly.
+
+### Wow Us
+
+Just that:
+Do something cool.
+Tell us about what you've done (in the Slack channel).
+Impress us.
+And instead of you working on "our" ideas, we'll help you with "your" idea.
 
 ## Other Issues to Consider
 
