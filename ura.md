@@ -29,7 +29,7 @@ In you email, mention the phrase "banana odyssey": this lets me know you've actu
 
 The onboarding exercises are meant to be doable on any reasonably modern laptop, although there are known issues with Windows.
 If you're having issues, the [student teaching hosts](https://uwaterloo.ca/computer-science-computing-facility/teaching-hosts) are available for UWaterloo CS students.
-See [this issue](https://github.com/castorini/pyserini/issues/1611#issuecomment-1703253700) for additional details.
+For additional details, see [this issue](https://github.com/castorini/pyserini/issues/1611#issuecomment-1703253700) (on dealing with CPU limit) and [this issue](https://github.com/castorini/anserini/pull/2572) (for installing Java 21).
 
 ❗ Don't bother emailing me until you've done the steps above; if you do, I'll just refer you to this guide.
 Think of this as an "initial screen", which is necessary because I get more requests than I have time to respond in a customized manner.
