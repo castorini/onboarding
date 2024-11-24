@@ -2,15 +2,15 @@
 
 "Castorini" is the GitHub organization of [Jimmy Lin](https://cs.uwaterloo.ca/~jimmylin/)'s research group at the University of Waterloo.
 The name is a [portmanteau](https://en.wikipedia.org/wiki/Blend_word) of castor, which is the genus name for a [beaver](https://en.wikipedia.org/wiki/Beaver), and anserini, which is the genus name for a [goose](https://en.wikipedia.org/wiki/Anser_(bird)).
-It's difficult to come up with two animals that are more quintessentially Canadian than those!
+It's hard to come up with two animals that are as quintessentially Canadian as these!
 
 This repository contains onboarding resources for researchers who would like to work with us, which include new graduate students and undergraduates at the University of Waterloo.
 
-**Undergraduates at the University of Waterloo**: If you're interested in working with our group, read [this guide](ura.md) first.
+**Undergraduates at the University of Waterloo**: If you're interested in working with our group, read [this guide](ura.md).
 
 ## 🧱 Foundations of Retrieval
 
-This onboarding path provides the starting point of working in our group and comprises the following lessons:
+This onboarding path provides the starting point for working in our group and comprises the following lessons:
 
 1. Begin your journey [here](https://github.com/castorini/anserini/blob/master/docs/start-here.md). 
 2. [BM25 Baselines for MS MARCO Passage Ranking **in Anserini**](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-passage.md).
@@ -19,7 +19,7 @@ This onboarding path provides the starting point of working in our group and com
 5. [Contriever Baseline for NFCorpus](https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md)
 6. [A Deeper Dive into Dense and Sparse Representations](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework2.md)
 
-When you are proceeding along the onboarding path, please _don't_ send a separate pull request for each file.
+When proceeding along the onboarding path, please _don't_ send a separate pull request for each file.
 Instead, consolidate your edits into a single pull request for each repo.
 
 ## Resources
