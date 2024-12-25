@@ -1,7 +1,7 @@
 # Guide for Waterloo Undergraduates
 
 I'm always interested in working with bright and self-motivated Waterloo undergraduates, either as part of the formal [URA program](https://cs.uwaterloo.ca/current-undergraduate-students/research-opportunities/undergraduate-research-assistantship-ura-program) or informally otherwise.
-For me, working with undergraduates is an opportunity to expose them to my research passion and also to recruit future graduate students.
+For me, working with undergraduates provides an opportunity to expose them to my research passion and also to recruit future graduate students.
 
 ## What's In It For You?
 
@@ -11,21 +11,21 @@ You get to work on cool projects.
 You get to hone existing skills or learn new skills.
 You get exposure to cutting-edge research.
 
-If you're thinking of apply to graduate school beyond Waterloo, I might write you a good rec.
+If you're thinking of applying to graduate school beyond Waterloo, I might write you a good rec.
 If you're thinking of doing a Master's (or beyond) at Waterloo, you might get an offer to join my group.
 Not at the start, of course... we work up to that.
 
 The range of outcomes for undergrads working with me is very wide:
 At one end of the spectrum, (in many cases) I never hear from you again after the first week (totally fine!).
 At the other end of the spectrum, you love working with me so much that you decide to do your Ph.D. with me (see, for example, [Xueguang Ma](https://mxueguang.github.io/) and [Ronak Pradeep](https://ronakice.github.io/)).
-And everything in between... one common outcome is that you start as an URA and end up doing a thesis Master's with me (see, for example, [Michael Tu](https://www.tuzhucheng.com/) and many others).
+And everything in between... one common outcome is that you start as a URA and end up doing a thesis Master's with me (see, for example, [Michael Tu](https://www.tuzhucheng.com/) and many others).
 
 ## Initial Screening
 
 If you'd like to work with me, start by working through the [🧱 Foundations of Retrieval](README.md#-foundations-of-retrieval) onboarding path.
 By "working through", I mean follow the instructions, reproduce the results, and send a pull request to add to the reproduction logs.
 You can send me an email (with pointers to your pull requests) after you've progressed through the entire path.
-In you email, mention the phrase "banana odyssey": this lets me know you've actually read this guide.
+In your email, mention the phrase "banana odyssey": this lets me know you've actually read this guide.
 
 The onboarding exercises are meant to be doable on any reasonably modern laptop, although there are known issues with Windows.
 If you're having issues, the [student teaching hosts](https://uwaterloo.ca/computer-science-computing-facility/teaching-hosts) are available for UWaterloo CS students.
@@ -41,7 +41,7 @@ The onboarding path provides an opportunity to see if you're truly interested in
 I believe strongly in open science.
 To the extent that I can (keeping in mind that my students are actually the ones doing most of the work), I insist that _all_ research is backed by open-source code.
 But not just open-source code, _usable_ open-source code.
-We (try not to) just throw shit over the wall, but release code that allows anyone to _reproduce_ (_repro_ for short) our work, i.e., you can run our code and get the same results.
+We try not to just throw shit over the wall, but release code that allows anyone to _reproduce_ (_repro_ for short) our work, i.e., you can run our code and get the same results.
 
 Almost always, the first tasks that I ask students (URAs and even new graduate students) to do is to reproduce some existing piece of work.
 This serves two purposes:
@@ -54,11 +54,11 @@ Along the way, feel free to improve the documentation, for example, fix a typo, 
 Send a pull request.
 
 If you're interested in learning more, read my manifesto ["Building a Culture of Reproducibility in Academic Research"](https://arxiv.org/abs/2212.13534).
-As a minor terminological note, ["reproducibility" and "replicability" and _not_ the same](https://github.com/castorini/anserini/blob/master/docs/reproducibility.md).
+As a minor terminological note, ["reproducibility" and "replicability" are _not_ the same](https://github.com/castorini/anserini/blob/master/docs/reproducibility.md).
 
 ❗ I've written this elsewhere, but worth repeating: when doing the repros, try to understand what you're actually doing, instead of simply [cargo culting](https://en.wikipedia.org/wiki/Cargo_cult_programming) (i.e., blindly copying and pasting commands into a shell).
 Yes, you can fly through the guides if you just do that.
-For that matter, we could just write our repro guides as notebooks, and you can just do "Run all" to repro... but that defeats the point (which is why we _don't_ create notebooks).
+For that matter, we could simply write our repro guides as notebooks, and you can just do "Run all" to repro... but that defeats the point (which is why we _don't_ create notebooks).
 Use the repro guides as springboards for additional exploration.
 _Be curious._
 Say to yourself: Wait, this step seems to hide a bunch of complexity.
@@ -87,14 +87,15 @@ Possible answers include:
 
 + I want to learn what "research is all about".
 + I want to learn new skills.
-+ I want to better prepare myself for graduate school.
++ I want to better prepare myself for graduate studies.
 + I want a rec for graduate school.
 + I want to contribute to a paper and hopefully be included as a co-author.
 + I want to join Jimmy Lin's research group as a graduate student.
 
-So, start with your goal (or goals) in mind and work backwards, and "do" whatever best aligns.
+So, start with your goal (or goals) and work backwards, and "do" whatever best aligns.
+What you work on needs to be the alignment of (1) something that will contribute to your goals and (2) something that will contribute to my research group.
 
-At a high-level, your three options are:
+At a high level, your three options are:
 
 1. Work on a task of mine.
 2. Help out one of my graduate students.
@@ -113,7 +114,7 @@ However, you get direct interactions with me, and my tasks allow you to make obs
 In other words, you'll get "quick wins".
 If you're looking for a rec for grad school... well, it ultimately needs to come from me, so giving me a chance to get to know you isn't a bad idea.
 Of course, this is a double-edged sword: If you're highly capable and impress me, I can help you accomplish your goals.
-But on the other hand, I can see weaknesses and gaps as well.
+But on the other hand, I'll be able to see weaknesses and gaps as well.
 
 Working on my tasks (and completing them in a timely manner) builds credibility with me, and often "unlocks" more interesting research projects and multi-way interactions involving my graduate students.
 
@@ -135,7 +136,7 @@ This can either be a bug or a feature.
 It's a bug because you don't get to interact with me.
 It's a feature because if you "fail", I never know about it.
 
-At a high-level, working with my graduate students has the opposite tradeoffs as working directly with me:
+At a high level, working with my graduate students has the opposite tradeoffs as working directly with me:
 You'll likely get to work on more "interesting" things, but they may be less well-formed and more vague.
 And I'll only hear about your successes indirectly.
 
@@ -154,7 +155,7 @@ And instead of you working on "our" ideas, we'll help you with "your" idea.
 Students often ask what my expectations are: the answer is, I have _none_ (unless you sign up for a formal URA).
 Yes, seriously.
 If I don't hear from you after the first week, I won't think any less of you.
-Life is short, everyone has conflicting demands on their time, and you should only work on something if you're interested in it.
+Life is short, everyone has conflicting demands on their time, and you should only work on something if you're genuinely interested in it.
 
 My advice is simple: How much you get out of working with me is directly dependent on how much work you put in.
 The single most important trait in successfully working with me, I believe, is being _self-motivated_; generally, technical background isn't an issue &mdash; you got into Computer Science at Waterloo, after all.
@@ -162,7 +163,7 @@ With me, there are no deadlines.
 How much interaction you get with me depends on how fast you _choose_ to work.
 Starting with the "Initial Screen", once you finish something, I'll (try to) give you something else to work on.
 If you finish it in a day, I'll give you something else to work on, and the same after that.
-Those things will increase in complexity and provide you bigger learning opportunities... until you either stop working (had enough), or you decide you like them so much you want a greater level of commitment (e.g., you want to do a Masters with me).
+Those things will increase in complexity and provide you bigger learning opportunities... until you either stop working (had enough), or you decide you like them so much you want a greater level of commitment (e.g., you want to do a Master's with me).
 
 Note that, at least in the beginning, it may not be uncommon for me to assign the same task to multiple students.
 Because of the voluntary nature of URAs, it is hard for me gauge a student's level of interest, or when (if ever) something will be completed.
@@ -171,15 +172,14 @@ Typically, I'll try to coordinate and reduce duplication on GitHub issues, but a
 ### Types of Tasks
 
 You can get a sense of what each of my research projects are up to by looking at the recent commits, issues, etc.
-Things to think about wrt taks that you take on.
-Our job is to find you tasks that:
+To help maximize the chances of success, it's most desirable to find tasks that:
 
 + are concrete and can be clearly described;
-+ have clearly-defined success criteria; and,
++ have clearly defined success criteria; and,
 + provide learning opportunities for you.
 
-One question you should answer is whether you'd like to be on the critical path for our research or work on a side project.
-The critical path refers to things that are blockers for our research, for example, that are needed for the next paper deadline.
+One question you should answer is whether you'd like to be on the critical path for our research or work on a "side project".
+The critical path refers to tasks that are blockers for our research, for example, those needed for the next paper deadline.
 A side project might be a new avenue of exploration that on one is actively working on.
 Both have their advantages and disadvantages.
 
