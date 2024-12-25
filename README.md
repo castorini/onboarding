@@ -24,17 +24,5 @@ Instead, consolidate your edits into a single pull request for each repo.
 
 ## Resources
 
-This repository introduces several methods for users without local GPU resources.
-
 + [Transform Google Colab to a GPU instance with full SSH access](docs/colab-instructions.md)
 + [Guide to ComputeCanada GPU resources](docs/cc-guide.md)
-+ [Guide to use UW GPU resources](docs/school-gpu.md)
-
-
-## Training monoBERT from Scratch
-
-[This](https://github.com/capreolus-ir/capreolus/blob/feature/msmarco_psg/docs/reproduction/MS_MARCO.md) 
-is the guide to fine-tuning monoBERT on [MS MARCO Passage](https://github.com/microsoft/MSMARCO-Passage-Ranking) dataset,
-based on [Capreolus](https://capreolus.ai/) toolkit.
-For Compute Canada users, 
-you may need to set up the environment following [this](https://github.com/capreolus-ir/capreolus/blob/feature/msmarco_psg/docs/setup/setup-cc.md) guide. 
