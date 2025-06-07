@@ -2,7 +2,7 @@
 
 For users without local GPU resources, Colab is an available solution. It could be transformed into a GPU instance with full SSH access.
 
-This document refers to this [tutorial](https://imadelhanafi.com/posts/google_colal_server/).
+This document refers to this [tutorial](https://vvadithya.medium.com/establishing-an-ssh-connection-to-google-colab-a-step-by-step-guide-6e27a8302eb1).
 
 ## Setup sshd
 First of all, create a Colab notebook using your Google account and use the GPU runtime mode.
@@ -10,6 +10,7 @@ First of all, create a Colab notebook using your Google account and use the GPU 
 Let's setup and run `sshd`.
 ```
 ! apt-get install -qq -o=Dpkg::Use-Pty=0 openssh-server pwgen > /dev/null
+password = "yourpassword"
 ! echo root:$password | chpasswd
 ! mkdir -p /var/run/sshd
 ! echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
@@ -21,18 +22,19 @@ get_ipython().system_raw('/usr/sbin/sshd -D &')
 
 ## Setup Ngrok
 After that, we can install and run Ngrok, which creates a TCP tunnel.
-You can get authtoken from https://dashboard.ngrok.com/auth".
+You can get authtoken from https://dashboard.ngrok.com/get-started/your-authtoken".
 ```
-! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-! unzip -qq -n ngrok-stable-linux-amd64.zip
+! wget -q -c -nc https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+! tar -xvzf ngrok-v3-stable-linux-amd64.tgz
 import getpass
-authtoken = getpass.getpass()
-get_ipython().system_raw('./ngrok authtoken $authtoken && ./ngrok tcp 22 &')
+authtoken = getpass.getpass("Enter your ngrok authtoken: ")
+! ./ngrok config add-authtoken $authtoken
+get_ipython().system_raw('./ngrok tcp --region=us --log=stdout --log-format=json 22 > ngrok_log.txt &')
 ```
 
 ## Access your server
 Now, You can access your server through `ssh` command in your local machine.
-The TCP address and port number can be found through the Ngrok interface https://dashboard.ngrok.com/status.
+The TCP address and port number can be found through the Ngrok interface https://dashboard.ngrok.com/endpoints.
 ```
 ssh root@[tcp_address] -p [port_number]
 ```
