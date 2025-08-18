@@ -2,16 +2,16 @@
 
 ### Get started
 
-We have resource allocations from Alliance Canada for most of [their supercomputers](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/). To request access, create an account on their [website](http://ccdb.computecanada.ca) and follow [these instructions](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account). Jimmy's CCRI is `ssi-230-01`.
+We have resource allocations from Alliance Canada for most of [their supercomputers](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition/available-resources). To request access, create an account on their [website](https://ccdb.alliancecan.ca/security/login) and follow [these instructions](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account). Jimmy's CCRI is `ssi-230-01`.
 
-+ The use of your institutional username as your CC username is encouraged.
++ The use of your institutional username as your Alliance Canada username is encouraged.
 
 + Once you have submitted your application, you will receive your confirmation email. Don't forget to click on the confirmation link indicated in the email.
 
-There are four main general-purpose clusters, Rorqual, Fir, Nibi, and Narval, all of which you can login to with your CC credentials: `ssh USER@CLUSTERNAME.alliancecan.ca`.
+There are four main general-purpose clusters, Rorqual, Fir, Nibi, and Narval, all of which you can login to with your Alliance Canada credentials: `ssh USER@CLUSTERNAME.alliancecan.ca`.
 While the first three have 80GB H100 GPUs, Narval has 40GB A100s. Depending on your needs and resource availability in the clusters, you might have to switch between them.
 
-[CC Documentation](<https://docs.alliancecan.ca/wiki/Technical_documentation>) provides all details. From `Resources` on the left hand side you can check available computing resources in each cluster. The rest of the document will be based on Rorqual, though the usage of the other clusters should be identical or near-identical.
+[Alliance Canada Documentation](<https://docs.alliancecan.ca/wiki/Technical_documentation>) provides all details. From `Resources` on the left hand side you can check available computing resources in each cluster. The rest of the document will be based on Rorqual, though the usage of the other clusters should be identical or near-identical.
 
 ### Nodes and file system
 
