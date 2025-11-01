@@ -19,6 +19,7 @@ This onboarding path provides the starting point of working in our group and com
 5. [A Conceptual Framework for Retrieval](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework.md)
 6. [Contriever Baseline for NFCorpus](https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md)
 7. [A Deeper Dive into Dense and Sparse Representations](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework2.md)
+8. [A Deeper Dive into Learned Sparse Representations](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework3.md)
 
 When you are proceeding along the onboarding path, please _don't_ send a separate pull request for each file.
 Instead, consolidate your edits into a single pull request for each repo.
