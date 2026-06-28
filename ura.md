@@ -43,7 +43,7 @@ To the extent that I can (keeping in mind that my students are actually the ones
 But not just open-source code, _usable_ open-source code.
 We try not to just throw shit over the wall, but release code that allows anyone to _reproduce_ (_repro_ for short) our work, i.e., you can run our code and get the same results.
 
-Almost always, the first tasks that I ask students (URAs and even new graduate students) to do is to reproduce some existing piece of work.
+Almost always, the first task that I ask students (URAs and even new graduate students) to do is to reproduce some existing piece of work.
 This serves two purposes:
 
 + For you, the student, it offers an entry into our research. See if you like it.
@@ -107,7 +107,7 @@ Of course, you can do a mix of all three.
 
 I usually have a backlog of tasks I'd like to get done.
 If you work directly with me, you'll likely be given a task that is more focused on software engineering.
-My hacking these days focus mostly on things like tooling, UIs, and generally improving the experience in our Anserini/Pyserini toolkits.
+My hacking these days focuses mostly on things like tooling, UIs, and generally improving the experience in our Anserini/Pyserini toolkits.
 You might even call these tasks "boring".
 
 However, you get direct interactions with me, and my tasks allow you to make observable, concrete progress.
@@ -166,7 +166,7 @@ If you finish it in a day, I'll give you something else to work on, and the same
 Those things will increase in complexity and provide you bigger learning opportunities... until you either stop working (had enough), or you decide you like them so much you want a greater level of commitment (e.g., you want to do a Master's with me).
 
 Note that, at least in the beginning, it may not be uncommon for me to assign the same task to multiple students.
-Because of the voluntary nature of URAs, it is hard for me gauge a student's level of interest, or when (if ever) something will be completed.
+Because of the voluntary nature of URAs, it is hard for me to gauge a student's level of interest, or when (if ever) something will be completed.
 Typically, I'll try to coordinate and reduce duplication on GitHub issues, but as tasks move on and off the critical path to my other projects, preemption is a possibility.
 
 ### Types of Tasks
@@ -180,12 +180,12 @@ To help maximize the chances of success, it's most desirable to find tasks that:
 
 One question you should answer is whether you'd like to be on the critical path for our research or work on a "side project".
 The critical path refers to tasks that are blockers for our research, for example, those needed for the next paper deadline.
-A side project might be a new avenue of exploration that on one is actively working on.
+A side project might be a new avenue of exploration that no one is actively working on.
 Both have their advantages and disadvantages.
 
 Being on the critical path means greater time commitment, and that we'll be after you to deliver.
 But this likely means you'll get more attention and engagement from me and my graduate students.
-A side project is more likely more open-ended, but you'll likely get less focused direction and mentoring.
+A side project is likely to be more open-ended, but you'll likely get less focused direction and mentoring.
 For these, you'll really have to take the initiative.
 
 Another issue to think about is whether you wish to do a [_formal_ URA](https://cs.uwaterloo.ca/current-undergraduate-students/research-opportunities/undergraduate-research-assistantship-ura-program).
@@ -218,7 +218,7 @@ Your mastery of deep learning skills progresses roughly along the following leve
 + Level 4: You can code up novel NN architectures.
 
 The tasks I assign to URAs also tend to follow along this progression.
-Levels 1 and 2 are mostly focused on replication, although replicating training runs is often more complex than just replicating inference runs.
+Levels 1 and 2 are mostly focused on reproduction, although reproducing training runs is often more complex than reproducing inference runs.
 The beginning of level 3 is typically asking you to help us with experiments by making simple parametric changes, e.g., hyperparameter sweeps.
 This is usually followed by relatively simple model tweaks (e.g., change max to mean pooling), then followed by increasingly substantive model changes until level 4 is reached.
 
