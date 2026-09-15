@@ -7,34 +7,68 @@ For me, working with undergraduates provides an opportunity to expose them to my
 
 What's in it for you?
 
-You get to work on cool projects.
-You get to hone existing skills or learn new skills.
-You get exposure to cutting-edge research.
+Some answers:
 
-If you're thinking of applying to graduate school beyond Waterloo, I might write you a good rec.
++ You get to work on cool projects.
++ You get to learn new skills or hone existing skills.
++ You get exposure to cutting-edge research.
+
+If you're thinking of applying to graduate school, I might write you a good recommendation.
 If you're thinking of doing a Master's (or beyond) at Waterloo, you might get an offer to join my group.
 Not at the start, of course... we work up to that.
 
 The range of outcomes for undergrads working with me is very wide:
-At one end of the spectrum, (in many cases) I never hear from you again after the first week (totally fine!).
-At the other end of the spectrum, you love working with me so much that you decide to do your Ph.D. with me (see, for example, [Xueguang Ma](https://mxueguang.github.io/) and [Ronak Pradeep](https://ronakice.github.io/)).
-And everything in between... one common outcome is that you start as a URA and end up doing a thesis Master's with me (see, for example, [Michael Tu](https://www.tuzhucheng.com/) and many others).
 
-## Initial Screening
++ At one end of the spectrum, I never hear from you again after the first day.
+This happens often and it's totally fine.
+I consider it a success if you discover that you don't really enjoy the type of work that my group does, or that our working styles don't mesh well.
+In this case, you would have learned something about your preferences.
+Negative examples can sometimes be as valuable as positive examples.
++ At the other end of the spectrum, you love working with me so much that you want more... and more... culminating in a Ph.D. with me (see, for example, [Xueguang Ma](https://mxueguang.github.io/) and [Ronak Pradeep](https://ronakice.github.io/), former students who both started as Waterloo undergrads).
++ And everything in between... one common outcome is that you start as a URA and end up doing a thesis Master's with me (see, for example, [Michael Tu](https://www.tuzhucheng.com/) and [many others](https://cs.uwaterloo.ca/~jimmylin/students.html)).
+
+## Initial Screening and Onboarding
 
 If you'd like to work with me, start by working through the [🧱 Foundations of Retrieval](README.md#-foundations-of-retrieval) onboarding path.
 By "working through", I mean follow the instructions, reproduce the results, and send a pull request to add to the reproduction logs.
-You can send me an email (with pointers to your pull requests) after you've progressed through the entire path.
+You can send me an email (with pointers to your pull requests) after you've progressed through _the entire path_ and covered all the lessons.
 In your email, mention the phrase "banana odyssey": this lets me know you've actually read this guide.
 
 The onboarding exercises are meant to be doable on any reasonably modern laptop, although there are known issues with Windows.
 If you're having issues, the [student teaching hosts](https://uwaterloo.ca/computer-science-computing-facility/teaching-hosts) are available for UWaterloo CS students.
-For additional details, see [this issue](https://github.com/castorini/pyserini/issues/1611#issuecomment-1703253700) (on dealing with CPU limit) and [this issue](https://github.com/castorini/anserini/pull/2572) (for installing Java 21).
 
 ❗ Don't bother emailing me until you've done the steps above; if you do, I'll just refer you to this guide.
-Think of this as an "initial screen", which is necessary because I get more requests than I have time to respond in a customized manner.
-The onboarding path provides an opportunity to see if you're truly interested in my work; by working through the exercises, you might discover that it's not interesting to you... which is fine, but you would have (hopefully) learned something.
+Think of this as an "initial screen", which is necessary because I get more requests than I have time to respond to in a customized manner.
 
+## How to Approach the Onboarding Lessons
+
+The onboarding path is intended to teach you about the basics of information retrieval.
+It provides an opportunity to see if you're truly interested in the type of work that I do.
+By working through the lessons, you might discover that it's not interesting to you... which is fine, but hopefully you will have learned something.
+
+If you ask a coding agent to do everything for you (and yes, a modern coding agent can easily speedrun the entire sequence), then it's likely that you'll miss much of the intended learning.
+Use the agent to help you, not to do everything for you.
+Remember, you are solely responsible for understanding what you're doing and accountable for everything that you and your agent do.
+
+I can offer a few high-level tips:
+When going through the lessons (even without the help of an agent), make sure you understand what you're doing, instead of simply [cargo culting](https://en.wikipedia.org/wiki/Cargo_cult_programming) (i.e., blindly copying and pasting commands into a shell).
+Take the time to understand the purpose, the structure, and the results of every command you're running.
+Ask yourself: _what_ am I doing and _why_ am I doing this?
+
+_Understand the idea of progressive disclosure._
+Abstractions are a central part of computer science, and the lessons are written with this in mind.
+For example, a command provides an entry point to an abstraction that composes three other abstractions, which in turn "wrap" five other abstractions, etc.
+Abstractions hide complexity, but learning requires engagement with complexity at the right level.
+What's hidden behind the abstractions is typically revealed as you go deeper and deeper into the code, providing the answers to _what_ and _why_.
+You don't need to unpack every abstraction immediately, but...
+
+_Be curious._
+Use the lessons as a springboard for additional explorations, for example, to dig deeper into the code, to challenge your own understanding, to reveal what's behind an abstraction.
+Say to yourself: Wait, this step seems to hide a bunch of complexity.
+I wonder what's happening behind the scenes?
+I'm really interested in learning more.
+Why don't I go off on a "side quest" to explore?
+Side quests are encouraged!
 
 ## What's the Deal with All This Reproduction?
 
@@ -56,25 +90,17 @@ Send a pull request.
 If you're interested in learning more, read my manifesto ["Building a Culture of Reproducibility in Academic Research"](https://arxiv.org/abs/2212.13534).
 As a minor terminological note, ["reproducibility" and "replicability" are _not_ the same](https://github.com/castorini/anserini/blob/master/docs/reproducibility.md).
 
-❗ I've written this elsewhere, but worth repeating: when doing the repros, try to understand what you're actually doing, instead of simply [cargo culting](https://en.wikipedia.org/wiki/Cargo_cult_programming) (i.e., blindly copying and pasting commands into a shell).
-Yes, you can fly through the guides if you just do that.
-For that matter, we could simply write our repro guides as notebooks, and you can just do "Run all" to repro... but that defeats the point (which is why we _don't_ create notebooks).
-Use the repro guides as springboards for additional exploration.
-_Be curious._
-Say to yourself: Wait, this step seems to hide a bunch of complexity.
-I wonder what's happening behind the scenes?
-Why don't I go off on a "side quest" to explore?
-Side quests are encouraged!
-
 ## What Happens Next?
 
 After you've finished the onboarding, I'll send you a Slack invite and drop you into a channel where all the URAs "hang out".
 It's a channel for high-level coordination.
 From there, DM groups and other channels get formed around specific tasks and projects.
-Sometimes, this channel is full of activity (particularly at the start of semesters), other times, it's relatively quiet.
+Sometimes, this channel is full of activity (particularly at the start of semesters); other times, it's relatively quiet.
 
 Start by scrolling around and reading recent activity in the channel to find out what everyone's been up to.
 We keep a [backlog](https://github.com/castorini/ura-projects/issues) of things for URAs to work on; worth browsing through, but may not be totally up to date.
+
+A strategic direction...
 
 From here, your natural question is: Once I've onboarded, what do I do?
 
@@ -90,20 +116,20 @@ Possible answers include:
 + I want to better prepare myself for graduate studies.
 + I want a rec for graduate school.
 + I want to contribute to a paper and hopefully be included as a co-author.
-+ I want to join Jimmy Lin's research group as a graduate student.
++ I want to join your research group as a graduate student.
 
 So, start with your goal (or goals) and work backwards, and "do" whatever best aligns.
 What you work on needs to be the alignment of (1) something that will contribute to your goals and (2) something that will contribute to my research group.
 
 At a high level, your three options are:
 
-1. Work on a task of mine.
-2. Help out one of my graduate students.
-3. Wow us.
+1. Work directly with me.
+2. Work directly with one of my graduate students.
+3. Work by yourself and wow us.
 
 Of course, you can do a mix of all three.
 
-### Work on a Task of Mine
+### Work Directly With Me
 
 I usually have a backlog of tasks I'd like to get done.
 If you work directly with me, you'll likely be given a task that is more focused on software engineering.
@@ -125,13 +151,13 @@ Here's an arXiv paper ["End-to-End Retrieval with Learned Dense and Sparse Repre
 Finally, a downside to working directly with me is that I might be "flaky" (from your perspective).
 Working with URAs is relatively low on my list of priorities, and my attention is often preempted by something more urgent, in which case I might not be able to respond in a timely manner.
 
-### Help Out One of My Graduate Students
+### Work Directly with One of My Graduate Students
 
 My graduate students are always working on really exciting ideas, and they're often looking for help.
 They'll post their ideas in the Slack channel, and you're welcome to join and help out.
 Typically, if you make significant contributions to a graduate student's project, you can expect to be included as a co-author on a paper.
 
-URAs working with graduate students often happens without my knowledge:
+URAs often work with graduate students without my knowledge:
 This can either be a bug or a feature.
 It's a bug because you don't get to interact with me.
 It's a feature because if you "fail", I never know about it.
@@ -140,7 +166,7 @@ At a high level, working with my graduate students has the opposite tradeoffs as
 You'll likely get to work on more "interesting" things, but they may be less well-formed and more vague.
 And I'll only hear about your successes indirectly.
 
-### Wow Us
+### Work By Yourself and Wow Us
 
 Just that:
 Do something cool.
@@ -163,7 +189,7 @@ With me, there are no deadlines.
 How much interaction you get with me depends on how fast you _choose_ to work.
 Starting with the "Initial Screen", once you finish something, I'll (try to) give you something else to work on.
 If you finish it in a day, I'll give you something else to work on, and the same after that.
-Those things will increase in complexity and provide you bigger learning opportunities... until you either stop working (had enough), or you decide you like them so much you want a greater level of commitment (e.g., you want to do a Master's with me).
+Those things will increase in complexity and provide you with bigger learning opportunities... until you either stop working (had enough), or you decide you like them so much you want a greater level of commitment (e.g., you want to do a Master's with me).
 
 Note that, at least in the beginning, it may not be uncommon for me to assign the same task to multiple students.
 Because of the voluntary nature of URAs, it is hard for me to gauge a student's level of interest, or when (if ever) something will be completed.
@@ -171,11 +197,11 @@ Typically, I'll try to coordinate and reduce duplication on GitHub issues, but a
 
 ### Types of Tasks
 
-You can get a sense of what each of my research projects are up to by looking at the recent commits, issues, etc.
+You can get a sense of what each of my research projects is up to by looking at the recent commits, issues, etc.
 To help maximize the chances of success, it's most desirable to find tasks that:
 
 + are concrete and can be clearly described;
-+ have clearly defined success criteria; and,
++ have clearly defined success criteria; and
 + provide learning opportunities for you.
 
 One question you should answer is whether you'd like to be on the critical path for our research or work on a "side project".
@@ -213,7 +239,7 @@ Many students want to become muppet trainers, and I have a relatively well-devel
 Your mastery of deep learning skills progresses roughly along the following levels:
 
 + Level 1: You're able to run inference with an existing model.
-+ Level 2: You're able to train a NN from scratch and get reasonable results (with existing code).
++ Level 2: You're able to train an NN from scratch and get reasonable results (with existing code).
 + Level 3: You can make simple tweaks to an existing model.
 + Level 4: You can code up novel NN architectures.
 
