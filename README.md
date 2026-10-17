@@ -17,7 +17,7 @@ This onboarding path provides the starting point of working in our group and com
 3. [Dense Retrieval for MS MARCO Passage Ranking **in Anserini**](https://github.com/castorini/anserini/blob/master/docs/experiments-msmarco-passage2.md).
 4. [BM25 Baseline for MS MARCO Passage Ranking **in Pyserini**](https://github.com/castorini/pyserini/blob/master/docs/experiments-msmarco-passage.md).
 5. [A Conceptual Framework for Retrieval](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework.md)
-6. [Contriever Baseline for NFCorpus](https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md)
+6. [BGE-base Baseline for NFCorpus](https://github.com/castorini/pyserini/blob/master/docs/experiments-nfcorpus.md)
 7. [A Deeper Dive into Dense and Sparse Representations](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework2.md)
 8. [A Deeper Dive into Learned Sparse Representations](https://github.com/castorini/pyserini/blob/master/docs/conceptual-framework3.md)
 
