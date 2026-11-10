@@ -2,6 +2,23 @@
 
 These notes are primarily meant for undergraduate students at the University of Waterloo who are interested in getting involved in my research group.
 
+## Current Focus (2026/11/10)
+
+**What are we working on now?**
+
+I am most excited about our recent Project Greenhouse work:
+
+> Jimmy Lin, Sahel Sharifymoghaddam, Lingwei Gu, and Nour Jedidi. [Project Greenhouse: Progress Toward Fully Open and Sovereign Agentic Search.](https://arxiv.org/abs/2610.11922) arXiv:2610.11922, October 2026.
+
+Project Greenhouse represents our exploration of a simple thesis: We believe that it is possible to build fully open and sovereign models for agentic search with only modest computational resources.
+
+As a first milestone, we describe how to build a competitive pointwise decoder-only reranker using a simple two-step recipe comprising pre-training from scratch followed by supervised fine-tuning, starting only from commonly available datasets.
+Contrary to the dominant approach in the literature, we do not rely on existing open-weight backbones from third parties, and thus we are fully in control of model training, from end to end.
+
+To me, what's exciting is that we can pre-train models from scratch that achieve competitive task-specific effectiveness with limited compute resources.
+More colloquially, a _meh_ pre-trained backbone can still yield a _good_ model with the right SFT recipe.
+We've demonstrated this for reranking, and the hypothesis is that this carries over to other tasks as well.
+
 ## Current Focus (2026/08/31)
 
 **What are we working on now?**
